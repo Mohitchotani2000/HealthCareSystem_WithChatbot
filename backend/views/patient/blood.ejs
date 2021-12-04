@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+   <div class="heading">
+       <h1 class="head">Blood Donation Form</h1>
+       <!-- <h2 class="subheading"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. At mollitia, excepturi repellendus quis aliquid ab.</h2> -->
+   </div> 
+   <form method="get" action="/patient/dashboard" onsubmit="myFunction()">
+       <div id="content1">
+       <label>First Name</label> <br> <br>
+       <input type="text" placeholder="Enter your First Name" class="box" required> <br><br>
+       <label>Last Name</label> <br> <br>
+       <input type="text" placeholder="Enter your Last Name" class="box" required> <br><br>
+       <label>Doctor's Name</label> <br> <br>
+       <input type="text" placeholder="Enter your Doctors Name" class="box" required> <br><br>
+       <label>Email-ID</label> <br> <br>
+       <input type="email" placeholder="Enter your Email" class="box" required> <br><br>
+       <label>Phone Number</label> <br> <br>
+       <input type="number" placeholder="Enter your number" class="box" required> <br><br>
+       <label>Age</label> <br> <br>
+       <input type="number" placeholder="Enter your Age" class="box" required> <br><br>
+    <br>
+    <label id="head1">Gender</label> <br> <br>
+    <input type="radio" class="gen"> &nbsp&nbsp&nbspMale <br> <br>
+    <input type="radio" class="gen"> &nbsp&nbsp&nbspFemale <br> <br>
+    <input type="radio" class="gen"> &nbsp&nbsp&nbspOther<br> <br>
+    <label>Blood Group</label>
+    <div id="option2">
+        <select name="department" required>
+            <option value="">Select your Blood Group</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>O+</option>
+            <option>O-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+        </select>
+    </div>
+    <br> <br>
+    
+    <label>Upload your Medical History</label> <br> <br>
+        <input type="file" id="myFile" name="filename">
+        <input type="submit" class="btn">
+        <!-- <button><h3>Submit</h3></button> -->
+</div>
+   </form>
+   <script>
+    function myFunction() {
+      alert("The form was submitted");
+    }
+    </script>
+</body>
+</html>

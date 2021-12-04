@@ -1,0 +1,46 @@
+<%- include('../partials/patient/header') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <br>
+            <div class="panel panel-default panel-table">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col col-xs-6">
+                    <h2 class="panel-title">Pending Appointments:</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel-body">
+                <table class="table table-striped table-bordered table-list">
+
+                  <thead>
+                    <tr>
+                        <th><center> <em class="fa fa-cog"> </center></em></th>
+                        <th>#</th>
+                        <th>Department</th>
+                        <th>Message Given</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                        <% rows.forEach( (row, i) => { %>
+                        <tr>
+                            <td align="center"><a href="delete/<%=row.Appointment_id%>" class="btn btn-primary" >Cancel</em></a></td>
+                            <td> <%=i+1 %> </td>
+                            <td> <%=row.department %> </td>
+                            <td> <%=row.Message %> </td>
+                        </tr>
+                        <% }) %>
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer') %> 
