@@ -19,6 +19,22 @@
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="/css/tooplate-style.css">
+     
+         <script>
+          window.watsonAssistantChatOptions = {
+              integrationID: "edf30670-a87b-4db0-8c24-73e6edfbe443", // The ID of this integration.
+              region: "eu-gb", // The region your integration is hosted in.
+              serviceInstanceID: "c530107b-551f-4bcf-b125-0c0f9a6a28b8", // The ID of your service instance.
+              onLoad: function(instance) {
+                  instance.render();
+              }
+          };
+          setTimeout(function() {
+              const t = document.createElement('script');
+              t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+              document.head.appendChild(t);
+          });
+      </script>
 
 </head>
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50" style="background-image: url('images/medicine.png'); background-size: contain; background-repeat: no-repeat; background-position: right;">
